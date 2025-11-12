@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Uploader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .upload-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .upload-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 15px auto;
+        }
+        input[type="submit"] {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .preview {
+            margin-top: 20px;
+        }
+        .preview img {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Your Image</h2>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file_upload" accept=".jpg,.jpeg,.png,.gif" required>
+            <br>
+            <input type="submit" value="Upload">
+            <p style="font-size:12px;color:#666;">Max size: 500Kb | Allowed: JPG, PNG, GIF</p>
+        </form>
+
+            </div>
+</body>
+</html>
+

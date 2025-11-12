@@ -1,0 +1,579 @@
+                             LAB_00407843                                    XREF[1]:     005f9710(*)  
+        00407843 e8 c8 93        CALL       FUN_00420c10                                     char FUN_00420c10(undefined8 par
+                 01 00
+        00407848 48 8d 35        LEA        RSI,[s_Give_Me_Flag:_0059fcb7]                   = "Give Me Flag:\n"
+                 68 84 19 00
+        0040784f 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 0a 78 20 00
+        00407856 48 c7 05        MOV        qword ptr [DAT_0060f268],0x0                     = ??
+                 07 7a 20 
+                 00 00 00 
+        00407861 e8 7a c7        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407866 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 f3 77 20 00
+        0040786d e8 5e b1        CALL       FUN_004929d0                                     long * FUN_004929d0(undefined8 p
+                 08 00
+        00407872 48 8d 85        LEA        RAX=>local_208,[RBP + -0x200]
+                 00 fe ff ff
+        00407879 48 8d b5        LEA        RSI=>local_218,[RBP + -0x210]
+                 f0 fd ff ff
+        00407880 48 c7 85        MOV        qword ptr [RBP + local_210],0x0
+                 f8 fd ff 
+                 ff 00 00 
+        0040788b 48 8d 3d        LEA        RDI,[DAT_0060f180]                               = ??
+                 ee 78 20 00
+        00407892 48 89 85        MOV        qword ptr [RBP + local_218],RAX
+                 f0 fd ff ff
+        00407899 c6 85 00        MOV        byte ptr [RBP + local_208[0]],0x0
+                 fe ff ff 00
+                             try { // try from 004078a0 to 004078a4 has its CatchHandler @
+                             LAB_004078a0                                    XREF[1]:     005f9714(*)  
+        004078a0 e8 eb 39        CALL       FUN_004ab290                                     undefined FUN_004ab290(undefined
+                 0a 00
+                             } // end try from 004078a0 to 004078a4
+        004078a5 48 8b 10        MOV        RDX,qword ptr [RAX]
+        004078a8 48 8b 52 e8     MOV        RDX,qword ptr [RDX + -0x18]
+        004078ac f6 44 10        TEST       byte ptr [RAX + RDX*0x1 + 0x20],0x5
+                 20 05
+        004078b1 74 30           JZ         LAB_004078e3
+                             LAB_004078b3                                    XREF[3]:     00407e46(j), 00407e9e(j), 
+                                                                                          00408088(j)  
+        004078b3 48 8d bd        LEA        RDI=>local_218,[RBP + -0x210]
+                 f0 fd ff ff
+        004078ba e8 81 fb        CALL       FUN_004a7440                                     undefined FUN_004a7440(undefined
+                 09 00
+        004078bf 48 8b 45 c8     MOV        RAX,qword ptr [RBP + local_40]
+        004078c3 64 48 2b        SUB        RAX,qword ptr FS:[0x28]
+                 04 25 28 
+                 00 00 00
+        004078cc 0f 85 5c        JNZ        LAB_0040812e
+                 08 00 00
+        004078d2 48 8d 65 d8     LEA        RSP=>local_30,[RBP + -0x28]
+        004078d6 31 c0           XOR        EAX,EAX
+        004078d8 5b              POP        RBX
+        004078d9 41 5c           POP        R12
+        004078db 41 5d           POP        R13
+        004078dd 41 5e           POP        R14
+        004078df 41 5f           POP        R15
+        004078e1 5d              POP        RBP
+        004078e2 c3              RET
+                             LAB_004078e3                                    XREF[1]:     004078b1(j)  
+        004078e3 48 8b b5        MOV        RSI,qword ptr [RBP + local_210]
+                 f8 fd ff ff
+        004078ea 48 8b bd        MOV        RDI,qword ptr [RBP + local_218]
+                 f0 fd ff ff
+        004078f1 66 0f ef c0     PXOR       XMM0,XMM0
+        004078f5 45 31 db        XOR        R11D,R11D
+        004078f8 e8 c3 16        CALL       FUN_00408fc0                                     ulong FUN_00408fc0(byte * param_
+                 00 00
+        004078fd 48 8d b5        LEA        RSI=>local_238,[RBP + -0x230]
+                 d0 fd ff ff
+        00407904 48 8d bd        LEA        RDI=>local_218,[RBP + -0x210]
+                 f0 fd ff ff
+        0040790b 4c 89 9d        MOV        qword ptr [RBP + local_228[0]],R11
+                 e0 fd ff ff
+        00407912 49 89 c5        MOV        R13,RAX
+        00407915 0f 29 85        MOVAPS     xmmword ptr [RBP + local_238[0]],XMM0
+                 d0 fd ff ff
+                             try { // try from 0040791c to 00407a7e has its CatchHandler @
+                             LAB_0040791c                                    XREF[1]:     005f971a(*)  
+        0040791c e8 6f 1a        CALL       FUN_00409390                                     undefined FUN_00409390(long * pa
+                 00 00
+        00407921 48 8b b5        MOV        RSI,qword ptr [RBP + local_238[8]]
+                 d8 fd ff ff
+        00407928 48 8b bd        MOV        RDI,qword ptr [RBP + local_238[0]]
+                 d0 fd ff ff
+        0040792f e8 bc 15        CALL       FUN_00408ef0                                     uint FUN_00408ef0(long param_1, 
+                 00 00
+        00407934 48 8d 35        LEA        RSI,[s_analyzing_input..._0059fcc6]              = "analyzing input...\n"
+                 8b 83 19 00
+        0040793b 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 1e 77 20 00
+        00407942 48 69 9d        IMUL       RBX,qword ptr [RBP + local_210],0x83
+                 f8 fd ff 
+                 ff 83 00 
+        0040794d 41 89 c6        MOV        R14D,EAX
+        00407950 44 31 e8        XOR        EAX,R13D
+        00407953 4c 01 eb        ADD        RBX,R13
+        00407956 48 01 c3        ADD        RBX,RAX
+        00407959 e8 82 c6        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        0040795e 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 fb 76 20 00
+        00407965 e8 66 b0        CALL       FUN_004929d0                                     long * FUN_004929d0(undefined8 p
+                 08 00
+        0040796a bf 2c 01        MOV        EDI,0x12c
+                 00 00
+        0040796f e8 ec 14        CALL       FUN_00408e60                                     undefined FUN_00408e60(long para
+                 00 00
+        00407974 48 8d 35        LEA        RSI,[s_stage1:_calc_a=_0059fcda]                 = "stage1: calc_a="
+                 5f 83 19 00
+        0040797b 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 de 76 20 00
+        00407982 e8 59 c6        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407987 48 89 c7        MOV        RDI,RAX
+        0040798a 48 8b 00        MOV        RAX,qword ptr [RAX]
+        0040798d 4c 89 ee        MOV        RSI,R13
+        00407990 48 8b 50 e8     MOV        RDX,qword ptr [RAX + -0x18]
+        00407994 48 01 fa        ADD        RDX,RDI
+        00407997 8b 42 18        MOV        EAX,dword ptr [RDX + 0x18]
+        0040799a 83 e0 b5        AND        EAX,0xffffffb5
+        0040799d 83 c8 08        OR         EAX,0x8
+        004079a0 89 42 18        MOV        dword ptr [RDX + 0x18],EAX
+        004079a3 e8 c8 cb        CALL       FUN_00494570                                     ulong * FUN_00494570(undefined8 
+                 08 00
+        004079a8 48 8d 35        LEA        RSI,[DAT_005a0e94]                               = 0Ah
+                 e5 94 19 00
+        004079af 48 89 c7        MOV        RDI,RAX
+        004079b2 e8 29 c6        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        004079b7 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 a2 76 20 00
+        004079be e8 0d b0        CALL       FUN_004929d0                                     long * FUN_004929d0(undefined8 p
+                 08 00
+        004079c3 bf 18 01        MOV        EDI,0x118
+                 00 00
+        004079c8 e8 93 14        CALL       FUN_00408e60                                     undefined FUN_00408e60(long para
+                 00 00
+        004079cd 48 8d 35        LEA        RSI,[s_stage2:_calc_b=_0059fcea]                 = "stage2: calc_b="
+                 16 83 19 00
+        004079d4 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 85 76 20 00
+        004079db e8 00 c6        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        004079e0 48 89 c7        MOV        RDI,RAX
+        004079e3 48 8b 00        MOV        RAX,qword ptr [RAX]
+        004079e6 48 89 de        MOV        RSI,RBX
+        004079e9 48 8b 50 e8     MOV        RDX,qword ptr [RAX + -0x18]
+        004079ed 48 01 fa        ADD        RDX,RDI
+        004079f0 8b 42 18        MOV        EAX,dword ptr [RDX + 0x18]
+        004079f3 83 e0 b5        AND        EAX,0xffffffb5
+        004079f6 83 c8 08        OR         EAX,0x8
+        004079f9 89 42 18        MOV        dword ptr [RDX + 0x18],EAX
+        004079fc e8 6f cb        CALL       FUN_00494570                                     ulong * FUN_00494570(undefined8 
+                 08 00
+        00407a01 48 8d 35        LEA        RSI,[DAT_005a0e94]                               = 0Ah
+                 8c 94 19 00
+        00407a08 48 89 c7        MOV        RDI,RAX
+        00407a0b e8 d0 c5        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407a10 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 49 76 20 00
+        00407a17 e8 b4 af        CALL       FUN_004929d0                                     long * FUN_004929d0(undefined8 p
+                 08 00
+        00407a1c bf 04 01        MOV        EDI,0x104
+                 00 00
+        00407a21 e8 3a 14        CALL       FUN_00408e60                                     undefined FUN_00408e60(long para
+                 00 00
+        00407a26 48 8d 35        LEA        RSI,[s_stage3:_calc_c=_0059fcfa]                 = "stage3: calc_c="
+                 cd 82 19 00
+        00407a2d 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 2c 76 20 00
+        00407a34 e8 a7 c5        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407a39 48 89 c7        MOV        RDI,RAX
+        00407a3c 48 8b 00        MOV        RAX,qword ptr [RAX]
+        00407a3f 44 89 f6        MOV        ESI,R14D
+        00407a42 48 8b 50 e8     MOV        RDX,qword ptr [RAX + -0x18]
+        00407a46 48 01 fa        ADD        RDX,RDI
+        00407a49 8b 42 18        MOV        EAX,dword ptr [RDX + 0x18]
+        00407a4c 83 e0 b5        AND        EAX,0xffffffb5
+        00407a4f 83 c8 02        OR         EAX,0x2
+        00407a52 89 42 18        MOV        dword ptr [RDX + 0x18],EAX
+        00407a55 e8 e6 ca        CALL       FUN_00494540                                     undefined FUN_00494540(undefined
+                 08 00
+        00407a5a 48 8d 35        LEA        RSI,[DAT_005a0e94]                               = 0Ah
+                 33 94 19 00
+        00407a61 48 89 c7        MOV        RDI,RAX
+        00407a64 e8 77 c5        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407a69 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 f0 75 20 00
+        00407a70 e8 5b af        CALL       FUN_004929d0                                     long * FUN_004929d0(undefined8 p
+                 08 00
+        00407a75 bf f0 00        MOV        EDI,0xf0
+                 00 00
+        00407a7a e8 e1 13        CALL       FUN_00408e60                                     undefined FUN_00408e60(long para
+                 00 00
+                             } // end try from 0040791c to 00407a7e
+        00407a7f 48 8d bd        LEA        RDI=>local_238,[RBP + -0x230]
+                 d0 fd ff ff
+        00407a86 e8 a5 36        CALL       FUN_0040b130                                     undefined FUN_0040b130(undefined
+                 00 00
+        00407a8b 0f b6 05        MOVZX      EAX,byte ptr [DAT_0060e080]                      = ??
+                 ee 65 20 00
+        00407a92 84 c0           TEST       AL,AL
+        00407a94 0f 85 7f        JNZ        LAB_00407e19
+                 03 00 00
+        00407a9a 48 8d 3d        LEA        RDI,[DAT_0060e080]                               = ??
+                 df 65 20 00
+        00407aa1 4c 8d 2d        LEA        R13,[DAT_0060e0a0]                               = ??
+                 f8 65 20 00
+        00407aa8 e8 53 83        CALL       FUN_0041fe00                                     undefined8 FUN_0041fe00(uint * p
+                 01 00
+        00407aad 85 c0           TEST       EAX,EAX
+        00407aaf 0f 85 ee        JNZ        LAB_00407ea3
+                 03 00 00
+                             LAB_00407ab5                                    XREF[1]:     00408042(j)  
+        00407ab5 48 8b bd        MOV        RDI,qword ptr [RBP + local_218]
+                 f0 fd ff ff
+        00407abc 48 8b b5        MOV        RSI,qword ptr [RBP + local_210]
+                 f8 fd ff ff
+                             LAB_00407ac3                                    XREF[1]:     00407e2e(j)  
+        00407ac3 66 0f ef c0     PXOR       XMM0,XMM0
+        00407ac7 48 01 fe        ADD        RSI,RDI
+        00407aca 45 31 c9        XOR        R9D,R9D
+        00407acd 4c 89 e9        MOV        RCX=>DAT_0060e0a0,R13                            = ??
+        00407ad0 0f 29 85        MOVAPS     xmmword ptr [RBP + local_238[0]],XMM0
+                 d0 fd ff ff
+        00407ad7 48 8d 95        LEA        RDX=>local_238,[RBP + -0x230]
+                 d0 fd ff ff
+        00407ade 0f 29 85        MOVAPS     xmmword ptr [RBP + local_228[0]],XMM0
+                 e0 fd ff ff
+        00407ae5 41 50           PUSH       R8
+        00407ae7 45 31 c0        XOR        R8D,R8D
+        00407aea 6a 01           PUSH       0x1
+                             try { // try from 00407aec to 00407af0 has its CatchHandler @
+                             LAB_00407aec                                    XREF[1]:     005f9721(*)  
+        00407aec e8 af 95        CALL       FUN_004110a0                                     undefined8 FUN_004110a0(undefine
+                 00 00
+                             } // end try from 00407aec to 00407af0
+        00407af1 48 8b bd        MOV        RDI,qword ptr [RBP + local_238[0]]
+                 d0 fd ff ff
+        00407af8 59              POP        RCX
+        00407af9 89 c3           MOV        EBX,EAX
+        00407afb 5e              POP        RSI
+        00407afc 48 85 ff        TEST       RDI,RDI
+        00407aff 0f 84 46        JZ         LAB_00407e4b
+                 03 00 00
+        00407b05 48 8b b5        MOV        RSI,qword ptr [RBP + local_228[0]]
+                 e0 fd ff ff
+        00407b0c 48 29 fe        SUB        RSI,RDI
+        00407b0f e8 dc 6c        CALL       thunk_FUN_005226a0                               undefined thunk_FUN_005226a0(ulo
+                 01 00
+        00407b14 84 db           TEST       BL,BL
+        00407b16 0f 85 37        JNZ        LAB_00407e53
+                 03 00 00
+                             LAB_00407b1c                                    XREF[1]:     00407e4d(j)  
+        00407b1c 4c 8b ad        MOV        R13,qword ptr [RBP + local_218]
+                 f0 fd ff ff
+        00407b23 4c 8b 85        MOV        R8,qword ptr [RBP + local_210]
+                 f8 fd ff ff
+        00407b2a 4b 8d 4c        LEA        RCX,[R13 + R8*0x1]
+                 05 00
+        00407b2f 4c 39 e9        CMP        RCX,R13
+        00407b32 0f 84 fb        JZ         LAB_00407e33
+                 02 00 00
+        00407b38 49 8d 70 ff     LEA        RSI,[R8 + -0x1]
+        00407b3c 48 83 fe 0e     CMP        RSI,0xe
+        00407b40 0f 86 47        JBE        LAB_0040808d
+                 05 00 00
+        00407b46 4c 89 c7        MOV        RDI,R8
+        00407b49 66 0f ef e4     PXOR       XMM4,XMM4
+        00407b4d 66 0f ef f6     PXOR       XMM6,XMM6
+        00407b51 4c 89 ea        MOV        RDX,R13
+        00407b54 48 83 e7 f0     AND        RDI,-0x10
+        00407b58 66 0f ef ed     PXOR       XMM5,XMM5
+        00407b5c 66 0f ef d2     PXOR       XMM2,XMM2
+        00407b60 4a 8d 04 2f     LEA        RAX,[RDI + R13*0x1]
+        00407b64 90              NOP
+        00407b65 66 66 2e        NOP        dword ptr CS:[RAX + RAX*0x1]
+                 0f 1f 84 
+                 00 00 00 
+                             LAB_00407b70                                    XREF[1]:     00407bf8(j)  
+        00407b70 f3 0f 6f 3a     MOVDQU     XMM7,xmmword ptr [RDX]=>local_208
+        00407b74 48 83 c2 10     ADD        RDX,0x10
+        00407b78 66 0f 6f cf     MOVDQA     XMM1,XMM7
+        00407b7c 66 0f 68 fe     PUNPCKHBW  XMM7,XMM6
+        00407b80 66 0f 60 ce     PUNPCKLBW  XMM1,XMM6
+        00407b84 66 0f 6f df     MOVDQA     XMM3,XMM7
+        00407b88 66 0f 69 fd     PUNPCKHWD  XMM7,XMM5
+        00407b8c 66 0f 6f c1     MOVDQA     XMM0,XMM1
+        00407b90 66 0f 61 dd     PUNPCKLWD  XMM3,XMM5
+        00407b94 66 0f 69 cd     PUNPCKHWD  XMM1,XMM5
+        00407b98 66 0f 61 c5     PUNPCKLWD  XMM0,XMM5
+        00407b9c 66 44 0f        MOVDQA     XMM8,XMM0
+                 6f c0
+        00407ba1 66 0f 6a c2     PUNPCKHDQ  XMM0,XMM2
+        00407ba5 66 44 0f        PUNPCKLDQ  XMM8,XMM2
+                 62 c2
+        00407baa 66 41 0f        PADDQ      XMM0,XMM8
+                 d4 c0
+        00407baf 66 44 0f        MOVDQA     XMM8,XMM7
+                 6f c7
+        00407bb4 66 0f 6a fa     PUNPCKHDQ  XMM7,XMM2
+        00407bb8 66 44 0f        PUNPCKLDQ  XMM8,XMM2
+                 62 c2
+        00407bbd 66 41 0f        PADDQ      XMM0,XMM8
+                 d4 c0
+        00407bc2 66 44 0f        MOVDQA     XMM8,XMM3
+                 6f c3
+        00407bc7 66 0f 6a da     PUNPCKHDQ  XMM3,XMM2
+        00407bcb 66 44 0f        PUNPCKLDQ  XMM8,XMM2
+                 62 c2
+        00407bd0 66 41 0f        PADDQ      XMM3,XMM8
+                 d4 d8
+        00407bd5 66 0f d4 c3     PADDQ      XMM0,XMM3
+        00407bd9 66 0f 6f d9     MOVDQA     XMM3,XMM1
+        00407bdd 66 0f 62 ca     PUNPCKLDQ  XMM1,XMM2
+        00407be1 66 0f 6a da     PUNPCKHDQ  XMM3,XMM2
+        00407be5 66 0f d4 cb     PADDQ      XMM1,XMM3
+        00407be9 66 0f d4 cf     PADDQ      XMM1,XMM7
+        00407bed 66 0f d4 c1     PADDQ      XMM0,XMM1
+        00407bf1 66 0f d4 e0     PADDQ      XMM4,XMM0
+        00407bf5 48 39 d0        CMP        RAX,RDX
+        00407bf8 0f 85 72        JNZ        LAB_00407b70
+                 ff ff ff
+        00407bfe 66 0f 6f c4     MOVDQA     XMM0,XMM4
+        00407c02 66 0f 73        PSRLDQ     XMM0,0x8
+                 d8 08
+        00407c07 66 0f d4 e0     PADDQ      XMM4,XMM0
+        00407c0b 66 48 0f        MOVQ       RBX,XMM4
+                 7e e3
+        00407c10 49 39 f8        CMP        R8,RDI
+        00407c13 74 1a           JZ         LAB_00407c2f
+        00407c15 66 66 2e        NOP        dword ptr CS:[RAX + RAX*0x1]
+                 0f 1f 84 
+                 00 00 00 
+                             LAB_00407c20                                    XREF[2]:     00407c2d(j), 00408092(j)  
+        00407c20 0f b6 10        MOVZX      EDX,byte ptr [RAX]=>local_208
+        00407c23 48 83 c0 01     ADD        RAX,0x1
+        00407c27 48 01 d3        ADD        RBX,RDX
+        00407c2a 48 39 c1        CMP        RCX,RAX
+        00407c2d 75 f1           JNZ        LAB_00407c20
+                             LAB_00407c2f                                    XREF[1]:     00407c13(j)  
+        00407c2f 48 83 fe 4f     CMP        RSI,0x4f
+        00407c33 0f 87 fa        JA         LAB_00407e33
+                 01 00 00
+        00407c39 4c 89 c6        MOV        RSI,R8
+        00407c3c 4c 89 ef        MOV        RDI,R13
+        00407c3f e8 7c 13        CALL       FUN_00408fc0                                     ulong FUN_00408fc0(byte * param_
+                 00 00
+        00407c44 48 31 d8        XOR        RAX,RBX
+        00407c47 83 e0 03        AND        EAX,0x3
+        00407c4a 48 83 e8 01     SUB        RAX,0x1
+        00407c4e 75 0a           JNZ        LAB_00407c5a
+        00407c50 41 f6 c0 01     TEST       R8B,0x1
+        00407c54 0f 85 3d        JNZ        LAB_00408097
+                 04 00 00
+                             LAB_00407c5a                                    XREF[1]:     00407c4e(j)  
+        00407c5a 48 8d bd        LEA        RDI=>local_1f8,[RBP + -0x1f0]
+                 10 fe ff ff
+        00407c61 48 8d 85        LEA        RAX=>local_1e8,[RBP + -0x1e0]
+                 20 fe ff ff
+        00407c68 31 d2           XOR        EDX,EDX
+        00407c6a c6 85 20        MOV        byte ptr [RBP + local_1e8],0x0
+                 fe ff ff 00
+        00407c71 4b 8d 34 00     LEA        RSI,[R8 + R8*0x1]
+        00407c75 48 89 85        MOV        qword ptr [RBP + local_1f8],RAX
+                 10 fe ff ff
+        00407c7c 49 89 fe        MOV        R14,RDI
+        00407c7f 48 89 95        MOV        qword ptr [RBP + local_1f0],RDX
+                 18 fe ff ff
+        00407c86 4c 89 85        MOV        qword ptr [RBP + local_260],R8
+                 a8 fd ff ff
+                             try { // try from 00407c8d to 00407cf0 has its CatchHandler @
+                             LAB_00407c8d                                    XREF[1]:     005f9727(*)  
+        00407c8d e8 ee 02        CALL       FUN_004a7f80                                     undefined FUN_004a7f80(undefined
+                 0a 00
+        00407c92 48 b8 fe        MOV        RAX,0x7ffffffffffffffe
+                 ff ff ff 
+                 ff ff ff 7f
+        00407c9c 48 2b 85        SUB        RAX,qword ptr [RBP + local_1f0]
+                 18 fe ff ff
+        00407ca3 48 3b 85        CMP        RAX,qword ptr [RBP + local_260]
+                 a8 fd ff ff
+        00407caa 0f 82 42        JC         LAB_004011f2
+                 95 ff ff
+        00407cb0 48 8b 95        MOV        RDX,qword ptr [RBP + local_260]
+                 a8 fd ff ff
+        00407cb7 4c 89 ee        MOV        RSI,R13
+        00407cba 4c 89 f7        MOV        RDI,R14
+        00407cbd e8 de 16        CALL       FUN_004a93a0                                     long * FUN_004a93a0(undefined8 p
+                 0a 00
+        00407cc2 4c 8b 85        MOV        R8,qword ptr [RBP + local_260]
+                 a8 fd ff ff
+        00407cc9 48 b8 fe        MOV        RAX,0x7ffffffffffffffe
+                 ff ff ff 
+                 ff ff ff 7f
+        00407cd3 48 2b 85        SUB        RAX,qword ptr [RBP + local_1f0]
+                 18 fe ff ff
+        00407cda 4c 39 c0        CMP        RAX,R8
+        00407cdd 0f 82 d6        JC         LAB_004011b9
+                 94 ff ff
+        00407ce3 4c 89 c2        MOV        RDX,R8
+        00407ce6 4c 89 ee        MOV        RSI,R13
+        00407ce9 4c 89 f7        MOV        RDI,R14
+        00407cec e8 af 16        CALL       FUN_004a93a0                                     long * FUN_004a93a0(undefined8 p
+                 0a 00
+                             } // end try from 00407c8d to 00407cf0
+        00407cf1 48 8b b5        MOV        RSI,qword ptr [RBP + local_1f0]
+                 18 fe ff ff
+        00407cf8 48 8b bd        MOV        RDI=>local_1f8,qword ptr [RBP + -0x1f0]
+                 10 fe ff ff
+                             try { // try from 00407cff to 00407d03 has its CatchHandler @
+                             LAB_00407cff                                    XREF[1]:     005f972d(*)  
+        00407cff e8 0c 18        CALL       FUN_00409510                                     undefined FUN_00409510(undefined
+                 00 00
+                             } // end try from 00407cff to 00407d03
+        00407d04 4c 89 f7        MOV        RDI,R14
+        00407d07 e8 34 f7        CALL       FUN_004a7440                                     undefined FUN_004a7440(undefined
+                 09 00
+                             LAB_00407d0c                                    XREF[1]:     004080d1(j)  
+        00407d0c 83 e3 0f        AND        EBX,0xf
+        00407d0f 48 83 fb 0d     CMP        RBX,0xd
+        00407d13 0f 84 1a        JZ         LAB_00407e33
+                 01 00 00
+        00407d19 4c 8d 6d a0     LEA        R13=>local_68,[RBP + -0x60]
+        00407d1d 48 8d 35        LEA        RSI,[DAT_005994d0]                               = 2DC742E3h
+                 ac 17 19 00
+        00407d24 b9 09 00        MOV        ECX,0x9
+                 00 00
+        00407d29 4c 89 ef        MOV        RDI,R13
+        00407d2c f3 a5           MOVSD.REP  RDI,RSI=>DAT_005994d0                            = 2DC742E3h
+                                                                                             = 4DAD9AE5h
+        00407d2e bf 24 00        MOV        EDI,0x24
+                 00 00
+                             try { // try from 00407d33 to 00407d37 has its CatchHandler @
+                             LAB_00407d33                                    XREF[1]:     005f9733(*)  
+        00407d33 e8 98 82        CALL       FUN_0041ffd0                                     undefined FUN_0041ffd0(undefined
+                 01 00
+                             } // end try from 00407d33 to 00407d37
+        00407d38 48 89 c3        MOV        RBX,RAX
+        00407d3b 48 8d 50 24     LEA        RDX,[RAX + 0x24]
+        00407d3f 66 0f 6f        MOVDQA     XMM0,xmmword ptr [DAT_005a3580]                  = B9h
+                 05 39 b8 
+                 19 00
+        00407d47 48 89 85        MOV        qword ptr [RBP + local_258],RAX
+                 b0 fd ff ff
+        00407d4e b9 05 00        MOV        ECX,0x5
+                 00 00
+        00407d53 31 c0           XOR        EAX,EAX
+        00407d55 48 8d 7b 10     LEA        RDI,[RBX + 0x10]
+        00407d59 48 89 95        MOV        qword ptr [RBP + local_248],RDX
+                 c0 fd ff ff
+        00407d60 f3 ab           STOSD.REP  RDI
+        00407d62 0f 11 03        MOVUPS     xmmword ptr [RBX],XMM0
+        00407d65 66 0f 6f        MOVDQA     XMM0,xmmword ptr [DAT_005a3590]                  = 05h
+                 05 23 b8 
+                 19 00
+        00407d6d b8 20 00        MOV        EAX,0x20
+                 00 00
+        00407d72 48 89 95        MOV        qword ptr [RBP + local_250],RDX
+                 b8 fd ff ff
+        00407d79 0f 11 43 10     MOVUPS     xmmword ptr [RBX + 0x10],XMM0
+        00407d7d 0f 1f 00        NOP        dword ptr [RAX]
+                             LAB_00407d80                                    XREF[1]:     00407d94(j)  
+        00407d80 41 0f b6        MOVZX      EDX,byte ptr [R13 + RAX*0x1]
+                 54 05 00
+        00407d86 83 f2 5a        XOR        EDX,0x5a
+        00407d89 88 14 03        MOV        byte ptr [RBX + RAX*0x1],DL
+        00407d8c 48 83 c0 01     ADD        RAX,0x1
+        00407d90 48 83 f8 24     CMP        RAX,0x24
+        00407d94 75 ea           JNZ        LAB_00407d80
+        00407d96 66 0f ef c0     PXOR       XMM0,XMM0
+        00407d9a 31 c0           XOR        EAX,EAX
+        00407d9c 48 8d b5        LEA        RSI=>local_238,[RBP + -0x230]
+                 d0 fd ff ff
+        00407da3 48 8d bd        LEA        RDI=>local_218,[RBP + -0x210]
+                 f0 fd ff ff
+        00407daa 48 89 85        MOV        qword ptr [RBP + local_228[0]],RAX
+                 e0 fd ff ff
+        00407db1 0f 29 85        MOVAPS     xmmword ptr [RBP + local_238[0]],XMM0
+                 d0 fd ff ff
+                             try { // try from 00407db8 to 00407e13 has its CatchHandler @
+                             LAB_00407db8                                    XREF[1]:     005f9739(*)  
+        00407db8 e8 d3 15        CALL       FUN_00409390                                     undefined FUN_00409390(long * pa
+                 00 00
+        00407dbd 48 8b b5        MOV        RSI,qword ptr [RBP + local_238[8]]
+                 d8 fd ff ff
+        00407dc4 48 8b bd        MOV        RDI,qword ptr [RBP + local_238[0]]
+                 d0 fd ff ff
+        00407dcb 48 89 f0        MOV        RAX,RSI
+        00407dce 48 29 f8        SUB        RAX,RDI
+        00407dd1 48 83 f8 24     CMP        RAX,0x24
+        00407dd5 0f 94 c2        SETZ       DL
+        00407dd8 31 c0           XOR        EAX,EAX
+        00407dda eb 21           JMP        LAB_00407dfd
+        00407ddc 0f              ??         0Fh
+        00407ddd 1f              ??         1Fh
+        00407dde 40              ??         40h    @
+        00407ddf 00              ??         00h
+                             LAB_00407de0                                    XREF[1]:     00407dff(j)  
+        00407de0 0f b6 0c 07     MOVZX      ECX,byte ptr [RDI + RAX*0x1]
+        00407de4 44 0f b6        MOVZX      R13D,byte ptr [RBX + RAX*0x1]
+                 2c 03
+        00407de9 44 38 e9        CMP        CL,R13B
+        00407dec 0f 94 c2        SETZ       DL
+        00407def 48 83 c0 01     ADD        RAX,0x1
+        00407df3 48 83 f8 24     CMP        RAX,0x24
+        00407df7 0f 84 4a        JZ         LAB_00408047
+                 02 00 00
+                             LAB_00407dfd                                    XREF[1]:     00407dda(j)  
+        00407dfd 84 d2           TEST       DL,DL
+        00407dff 75 df           JNZ        LAB_00407de0
+                             LAB_00407e01                                    XREF[1]:     00408057(j)  
+        00407e01 48 8d 35        LEA        RSI,[s_try_again_0059fd33]                       = "try again\n"
+                 2b 7f 19 00
+        00407e08 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 51 72 20 00
+        00407e0f e8 cc c1        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+                             } // end try from 00407db8 to 00407e13
+        00407e14 e9 57 02        JMP        LAB_00408070
+                 00 00
+                             LAB_00407e19                                    XREF[1]:     00407a94(j)  
+        00407e19 48 8b bd        MOV        RDI,qword ptr [RBP + local_218]
+                 f0 fd ff ff
+        00407e20 48 8b b5        MOV        RSI,qword ptr [RBP + local_210]
+                 f8 fd ff ff
+        00407e27 4c 8d 2d        LEA        R13,[DAT_0060e0a0]                               = ??
+                 72 62 20 00
+        00407e2e e9 90 fc        JMP        LAB_00407ac3
+                 ff ff
+                             LAB_00407e33                                    XREF[3]:     00407b32(j), 00407c33(j), 
+                                                                                          00407d13(j)  
+        00407e33 48 8d 35        LEA        RSI,[s_try_again_0059fd33]                       = "try again\n"
+                 f9 7e 19 00
+        00407e3a 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 1f 72 20 00
+                             try { // try from 00407e41 to 00407e9d has its CatchHandler @
+                             LAB_00407e41                                    XREF[1]:     005f973f(*)  
+        00407e41 e8 9a c1        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407e46 e9 68 fa        JMP        LAB_004078b3
+                 ff ff
+                             LAB_00407e4b                                    XREF[1]:     00407aff(j)  
+        00407e4b 84 c0           TEST       AL,AL
+        00407e4d 0f 84 c9        JZ         LAB_00407b1c
+                 fc ff ff
+                             LAB_00407e53                                    XREF[1]:     00407b16(j)  
+        00407e53 48 8d 35        LEA        RSI,[s_looks_like_flag:_0059fd21]                = "looks_like_flag: "
+                 c7 7e 19 00
+        00407e5a 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 ff 71 20 00
+        00407e61 e8 7a c1        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407e66 48 8b 95        MOV        RDX,qword ptr [RBP + local_210]
+                 f8 fd ff ff
+        00407e6d 48 8b b5        MOV        RSI,qword ptr [RBP + local_218]
+                 f0 fd ff ff
+        00407e74 48 89 c7        MOV        RDI,RAX
+        00407e77 e8 c4 bb        CALL       FUN_00493a40                                     ulong * FUN_00493a40(undefined8 
+                 08 00
+        00407e7c 48 8d 35        LEA        RSI,[DAT_005a0e94]                               = 0Ah
+                 11 90 19 00
+        00407e83 48 89 c7        MOV        RDI,RAX
+        00407e86 e8 55 c1        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+        00407e8b 48 8d 35        LEA        RSI,[s_good_job,_but_this_is_not_exactl_005994   = "good job, but this is not exa
+                 fe 15 19 00
+        00407e92 48 8d 3d        LEA        RDI,[DAT_0060f060]                               = ??
+                 c7 71 20 00
+        00407e99 e8 42 c1        CALL       FUN_00493fe0                                     ulong * FUN_00493fe0(undefined8 
+                 08 00
+                             } // end try from 00407e41 to 00407e9d
+        00407e9e e9 10 fa        JMP        LAB_004078b3
+                 ff ff

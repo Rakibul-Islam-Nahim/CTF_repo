@@ -1,0 +1,74 @@
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined __cdecl print_flag(void)
+             undefined         <UNASSIGNED>   <RETURN>
+             undefined4        Stack[-0x8]:4  local_8                                 XREF[1]:     0804927f(R)  
+             undefined4        Stack[-0x10]:4 local_10                                XREF[4]:     08049221(W), 
+                                                                                                   08049224(R), 
+                                                                                                   08049249(R), 
+                                                                                                   08049273(R)  
+             undefined         Stack[-0x50]:1 local_50                                XREF[2]:     0804924e(*), 
+                                                                                                   0804925d(*)  
+                             print_flag                                      XREF[3]:     Entry Point(*), 0804a150, 
+                                                                                          0804a1d4(*)  
+        080491f6 55              PUSH       EBP
+        080491f7 89 e5           MOV        EBP,ESP
+        080491f9 53              PUSH       EBX
+        080491fa 83 ec 54        SUB        ESP,0x54
+        080491fd e8 2e ff        CALL       __x86.get_pc_thunk.bx                            undefined __x86.get_pc_thunk.bx(
+                 ff ff
+        08049202 81 c3 fe        ADD        EBX,0x2dfe
+                 2d 00 00
+        08049208 83 ec 08        SUB        ESP,0x8
+        0804920b 8d 83 08        LEA        EAX,[EBX + 0xffffe008]=>DAT_0804a008             = 72h    r
+                 e0 ff ff
+        08049211 50              PUSH       EAX=>DAT_0804a008                                = 72h    r
+        08049212 8d 83 0a        LEA        EAX,[EBX + 0xffffe00a]=>s_flag.txt_0804a00a      = "flag.txt"
+                 e0 ff ff
+        08049218 50              PUSH       EAX=>s_flag.txt_0804a00a                         = "flag.txt"
+        08049219 e8 b2 fe        CALL       <EXTERNAL>::fopen                                FILE * fopen(char * __filename, 
+                 ff ff
+        0804921e 83 c4 10        ADD        ESP,0x10
+        08049221 89 45 f4        MOV        dword ptr [EBP + local_10],EAX
+        08049224 83 7d f4 00     CMP        dword ptr [EBP + local_10],0x0
+        08049228 75 1c           JNZ        LAB_08049246
+        0804922a 83 ec 0c        SUB        ESP,0xc
+        0804922d 8d 83 14        LEA        EAX,[EBX + 0xffffe014]=>s_Flag_file_not_found!   = "Flag file not found! Contact 
+                 e0 ff ff
+        08049233 50              PUSH       EAX=>s_Flag_file_not_found!_Contact_adm_0804a014 = "Flag file not found! Contact 
+        08049234 e8 67 fe        CALL       <EXTERNAL>::puts                                 int puts(char * __s)
+                 ff ff
+        08049239 83 c4 10        ADD        ESP,0x10
+        0804923c 83 ec 0c        SUB        ESP,0xc
+        0804923f 6a 01           PUSH       0x1
+        08049241 e8 6a fe        CALL       <EXTERNAL>::exit                                 void exit(int __status)
+                 ff ff
+                             -- Flow Override: CALL_RETURN (CALL_TERMINATOR)
+                             LAB_08049246                                    XREF[1]:     08049228(j)  
+        08049246 83 ec 04        SUB        ESP,0x4
+        08049249 ff 75 f4        PUSH       dword ptr [EBP + local_10]
+        0804924c 6a 40           PUSH       0x40
+        0804924e 8d 45 b4        LEA        EAX=>local_50,[EBP + -0x4c]
+        08049251 50              PUSH       EAX
+        08049252 e8 29 fe        CALL       <EXTERNAL>::fgets                                char * fgets(char * __s, int __n
+                 ff ff
+        08049257 83 c4 10        ADD        ESP,0x10
+        0804925a 83 ec 08        SUB        ESP,0x8
+        0804925d 8d 45 b4        LEA        EAX=>local_50,[EBP + -0x4c]
+        08049260 50              PUSH       EAX
+        08049261 8d 83 38        LEA        EAX,[EBX + 0xffffe038]=>DAT_0804a038             = F0h
+                 e0 ff ff
+        08049267 50              PUSH       EAX=>DAT_0804a038                                = F0h
+        08049268 e8 e3 fd        CALL       <EXTERNAL>::printf                               int printf(char * __format, ...)
+                 ff ff
+        0804926d 83 c4 10        ADD        ESP,0x10
+        08049270 83 ec 0c        SUB        ESP,0xc
+        08049273 ff 75 f4        PUSH       dword ptr [EBP + local_10]
+        08049276 e8 15 fe        CALL       <EXTERNAL>::fclose                               int fclose(FILE * __stream)
+                 ff ff
+        0804927b 83 c4 10        ADD        ESP,0x10
+        0804927e 90              NOP
+        0804927f 8b 5d fc        MOV        EBX,dword ptr [EBP + local_8]
+        08049282 c9              LEAVE
+        08049283 c3              RET

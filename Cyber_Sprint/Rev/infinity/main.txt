@@ -1,0 +1,90 @@
+undefined4 main(void)
+
+{
+  setvbuf(_stdout,(char *)0x0,2,0);
+  setvbuf(_stdin,(char *)0x0,2,0);
+  puts(&DAT_0804a178);
+  puts(&DAT_0804a1ec);
+  puts(&DAT_0804a218);
+  puts(&DAT_0804a244);
+  space_ranger_console();
+  return 0;
+}
+
+
+
+
+void space_ranger_console(void)
+
+{
+  undefined1 local_60 [32];
+  char local_40 [48];
+  int local_10;
+  
+  puts("\n=== SPACE RANGER CONSOLE ===");
+  puts("1. Read coordinates");
+  puts("2. Check clearance");
+  puts("3. Exit");
+  printf("> ");
+  fflush(_stdout);
+  fgets(local_40,0x30,_stdin);
+  local_10 = atoi(local_40);
+  if (local_10 == 1) {
+    read_coordinates();
+  }
+  else {
+    if (local_10 != 2) {
+      puts("To infinity and beyond!");
+      return;
+    }
+    check_clearance();
+  }
+  printf("Enter mission log: ");
+  fflush(_stdout);
+  read(0,local_60,0x80);
+  puts("Mission log saved.");
+  return;
+}
+
+
+
+
+void check_clearance(void)
+
+{
+  int iVar1;
+  
+  iVar1 = strcmp(secret_code,"LAUNCH_AUTHORIZED");
+  if (iVar1 == 0) {
+    puts(&DAT_0804a074);
+    launch_sequence();
+  }
+  else {
+    printf(&DAT_0804a08c,secret_code);
+  }
+  return;
+}
+
+
+
+void launch_sequence(void)
+
+{
+  char local_50 [64];
+  FILE *local_10;
+  
+  local_10 = fopen("flag.txt","r");
+  if (local_10 == (FILE *)0x0) {
+    puts("Flag file not found! Contact admin.");
+                    /* WARNING: Subroutine does not return */
+    exit(1);
+  }
+  fgets(local_50,0x40,local_10);
+  puts(&DAT_0804a038);
+  printf(&DAT_0804a059,local_50);
+  fclose(local_10);
+  return;
+}
+
+
+

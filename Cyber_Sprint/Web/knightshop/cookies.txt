@@ -1,0 +1,5 @@
+# Netscape HTTP Cookie File
+# https://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file! Do not edit.
+
+160.187.130.170	FALSE	/	FALSE	0	session	eyJlbWFpbCI6Im1ld0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoyMjYyfQ.aQ-LEg.rM9vIBITobkoCFcPyZZZtYhFqJI

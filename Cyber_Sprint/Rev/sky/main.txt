@@ -1,0 +1,81 @@
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined4 __cdecl main(void)
+             undefined4        EAX:4          <RETURN>
+             undefined4        Stack[0x0]:4   local_res0                              XREF[2]:     08049312(R), 
+                                                                                                   080493ab(*)  
+             undefined         Stack[-0x10]:1 local_10                                XREF[1]:     080493a5(*)  
+                             main                                            XREF[5]:     Entry Point(*), 
+                                                                                          _start:08049100(*), 
+                                                                                          _start:08049106(*), 0804a160, 
+                                                                                          0804a21c(*)  
+        0804930b 8d 4c 24 04     LEA        ECX=>Stack[0x4],[ESP + 0x4]
+        0804930f 83 e4 f0        AND        ESP,0xfffffff0
+        08049312 ff 71 fc        PUSH       dword ptr [ECX + local_res0]
+        08049315 55              PUSH       EBP
+        08049316 89 e5           MOV        EBP,ESP
+        08049318 53              PUSH       EBX
+        08049319 51              PUSH       ECX
+        0804931a e8 11 fe        CALL       __x86.get_pc_thunk.bx                            undefined __x86.get_pc_thunk.bx(
+                 ff ff
+        0804931f 81 c3 e1        ADD        EBX,0x2ce1
+                 2c 00 00
+        08049325 8b 83 fc        MOV        EAX,dword ptr [EBX + 0xfffffffc]=>->stdout       = 0804d030
+                 ff ff ff
+        0804932b 8b 00           MOV        EAX=>stdout,dword ptr [EAX]                      = ??
+        0804932d 6a 00           PUSH       0x0
+        0804932f 6a 02           PUSH       0x2
+        08049331 6a 00           PUSH       0x0
+        08049333 50              PUSH       EAX
+        08049334 e8 87 fd        CALL       <EXTERNAL>::setvbuf                              int setvbuf(FILE * __stream, cha
+                 ff ff
+        08049339 83 c4 10        ADD        ESP,0x10
+        0804933c 8b 83 f8        MOV        EAX,dword ptr [EBX + 0xfffffff8]=>->stdin        = 0804d024
+                 ff ff ff
+        08049342 8b 00           MOV        EAX=>stdin,dword ptr [EAX]                       = ??
+        08049344 6a 00           PUSH       0x0
+        08049346 6a 02           PUSH       0x2
+        08049348 6a 00           PUSH       0x0
+        0804934a 50              PUSH       EAX
+        0804934b e8 70 fd        CALL       <EXTERNAL>::setvbuf                              int setvbuf(FILE * __stream, cha
+                 ff ff
+        08049350 83 c4 10        ADD        ESP,0x10
+        08049353 83 ec 0c        SUB        ESP,0xc
+        08049356 8d 83 b4        LEA        EAX,[EBX + 0xffffe0b4]=>s_====================   = "=============================="
+                 e0 ff ff
+        0804935c 50              PUSH       EAX=>s_==============================_0804a0b4   = "=============================="
+        0804935d e8 3e fd        CALL       <EXTERNAL>::puts                                 int puts(char * __s)
+                 ff ff
+        08049362 83 c4 10        ADD        ESP,0x10
+        08049365 83 ec 0c        SUB        ESP,0xc
+        08049368 8d 83 d4        LEA        EAX,[EBX + 0xffffe0d4]=>s_SHERIFF_WOODY'S_GREE   = "   SHERIFF WOODY'S GREETING   "
+                 e0 ff ff
+        0804936e 50              PUSH       EAX=>s_SHERIFF_WOODY'S_GREETING_0804a0d4         = "   SHERIFF WOODY'S GREETING   "
+        0804936f e8 2c fd        CALL       <EXTERNAL>::puts                                 int puts(char * __s)
+                 ff ff
+        08049374 83 c4 10        ADD        ESP,0x10
+        08049377 83 ec 0c        SUB        ESP,0xc
+        0804937a 8d 83 f4        LEA        EAX,[EBX + 0xffffe0f4]=>s_====================   = "=============================
+                 e0 ff ff
+        08049380 50              PUSH       EAX=>s_==============================_0804a0f4   = "=============================
+        08049381 e8 1a fd        CALL       <EXTERNAL>::puts                                 int puts(char * __s)
+                 ff ff
+        08049386 83 c4 10        ADD        ESP,0x10
+        08049389 e8 f6 fe        CALL       vulnerable_greeting                              undefined vulnerable_greeting(vo
+                 ff ff
+        0804938e 83 ec 0c        SUB        ESP,0xc
+        08049391 8d 83 14        LEA        EAX,[EBX + 0xffffe114]=>s_See_ya_later,_partne   = "\nSee ya later, partner!"
+                 e1 ff ff
+        08049397 50              PUSH       EAX=>s_See_ya_later,_partner!_0804a114           = "\nSee ya later, partner!"
+        08049398 e8 03 fd        CALL       <EXTERNAL>::puts                                 int puts(char * __s)
+                 ff ff
+        0804939d 83 c4 10        ADD        ESP,0x10
+        080493a0 b8 00 00        MOV        EAX,0x0
+                 00 00
+        080493a5 8d 65 f8        LEA        ESP=>local_10,[EBP + -0x8]
+        080493a8 59              POP        ECX
+        080493a9 5b              POP        EBX
+        080493aa 5d              POP        EBP
+        080493ab 8d 61 fc        LEA        ESP=>local_res0,[ECX + -0x4]
+        080493ae c3              RET

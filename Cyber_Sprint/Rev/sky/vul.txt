@@ -1,0 +1,66 @@
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined __cdecl vulnerable_greeting(void)
+             undefined         <UNASSIGNED>   <RETURN>
+             undefined4        Stack[-0x8]:4  local_8                                 XREF[1]:     08049306(R)  
+             undefined         Stack[-0x2c]:1 local_2c                                XREF[2]:     080492d1(*), 
+                                                                                                   080492e0(*)  
+                             vulnerable_greeting                             XREF[4]:     Entry Point(*), main:08049389(c), 
+                                                                                          0804a158, 0804a1f8(*)  
+        08049284 55              PUSH       EBP
+        08049285 89 e5           MOV        EBP,ESP
+        08049287 53              PUSH       EBX
+        08049288 83 ec 24        SUB        ESP,0x24
+        0804928b e8 a0 fe        CALL       __x86.get_pc_thunk.bx                            undefined __x86.get_pc_thunk.bx(
+                 ff ff
+        08049290 81 c3 70        ADD        EBX,0x2d70
+                 2d 00 00
+        08049296 83 ec 0c        SUB        ESP,0xc
+        08049299 8d 83 40        LEA        EAX,[EBX + 0xffffe040]=>s_Howdy,_partner!_What   = "Howdy, partner! What's your n
+                 e0 ff ff
+        0804929f 50              PUSH       EAX=>s_Howdy,_partner!_What's_your_name_0804a040 = "Howdy, partner! What's your n
+        080492a0 e8 fb fd        CALL       <EXTERNAL>::puts                                 int puts(char * __s)
+                 ff ff
+        080492a5 83 c4 10        ADD        ESP,0x10
+        080492a8 83 ec 0c        SUB        ESP,0xc
+        080492ab 8d 83 62        LEA        EAX,[EBX + 0xffffe062]=>DAT_0804a062             = 3Eh    >
+                 e0 ff ff
+        080492b1 50              PUSH       EAX=>DAT_0804a062                                = 3Eh    >
+        080492b2 e8 99 fd        CALL       <EXTERNAL>::printf                               int printf(char * __format, ...)
+                 ff ff
+        080492b7 83 c4 10        ADD        ESP,0x10
+        080492ba 8b 83 fc        MOV        EAX,dword ptr [EBX + 0xfffffffc]=>->stdout       = 0804d030
+                 ff ff ff
+        080492c0 8b 00           MOV        EAX=>stdout,dword ptr [EAX]                      = ??
+        080492c2 83 ec 0c        SUB        ESP,0xc
+        080492c5 50              PUSH       EAX
+        080492c6 e8 95 fd        CALL       <EXTERNAL>::fflush                               int fflush(FILE * __stream)
+                 ff ff
+        080492cb 83 c4 10        ADD        ESP,0x10
+        080492ce 83 ec 0c        SUB        ESP,0xc
+        080492d1 8d 45 d8        LEA        EAX=>local_2c,[EBP + -0x28]
+        080492d4 50              PUSH       EAX
+        080492d5 e8 96 fd        CALL       <EXTERNAL>::gets                                 char * gets(char * __s)
+                 ff ff
+        080492da 83 c4 10        ADD        ESP,0x10
+        080492dd 83 ec 08        SUB        ESP,0x8
+        080492e0 8d 45 d8        LEA        EAX=>local_2c,[EBP + -0x28]
+        080492e3 50              PUSH       EAX
+        080492e4 8d 83 65        LEA        EAX,[EBX + 0xffffe065]=>s_Well_hello_there,_%s   = "Well hello there, %s!\n"
+                 e0 ff ff
+        080492ea 50              PUSH       EAX=>s_Well_hello_there,_%s!_0804a065            = "Well hello there, %s!\n"
+        080492eb e8 60 fd        CALL       <EXTERNAL>::printf                               int printf(char * __format, ...)
+                 ff ff
+        080492f0 83 c4 10        ADD        ESP,0x10
+        080492f3 83 ec 0c        SUB        ESP,0xc
+        080492f6 8d 83 7c        LEA        EAX,[EBX + 0xffffe07c]=>s_There's_a_snake_in_m   = "There's a snake in my boot, b
+                 e0 ff ff
+        080492fc 50              PUSH       EAX=>s_There's_a_snake_in_my_boot,_but_n_0804a   = "There's a snake in my boot, b
+        080492fd e8 9e fd        CALL       <EXTERNAL>::puts                                 int puts(char * __s)
+                 ff ff
+        08049302 83 c4 10        ADD        ESP,0x10
+        08049305 90              NOP
+        08049306 8b 5d fc        MOV        EBX,dword ptr [EBP + local_8]
+        08049309 c9              LEAVE
+        0804930a c3              RET
